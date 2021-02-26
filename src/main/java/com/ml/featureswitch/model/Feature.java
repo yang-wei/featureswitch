@@ -1,8 +1,7 @@
 package com.ml.featureswitch.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Feature {
@@ -30,5 +29,12 @@ public class Feature {
     public void setName(String name) {
         this.name = name;
     }
-}
 
+    @ManyToMany
+    @JoinTable
+    Set<User> users;
+
+    public boolean hasUser(User user) {
+        return users.contains(user);
+    }
+}
