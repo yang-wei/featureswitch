@@ -37,4 +37,16 @@ public class Feature {
     public boolean hasUser(User user) {
         return users.contains(user);
     }
+
+    public void addUser(User user) {
+        if (!hasUser(user)) {
+            users.add(user);
+        }
+    }
+
+    public void removeUser(User user) {
+        if (hasUser(user)) {
+            users.remove(user);
+        }
+    }
 }
