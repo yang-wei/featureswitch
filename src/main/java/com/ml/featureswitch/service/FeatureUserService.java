@@ -6,8 +6,6 @@ import com.ml.featureswitch.repository.FeatureRepository;
 import com.ml.featureswitch.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
-import javax.jws.soap.SOAPBinding;
-
 @Service
 public class FeatureUserService {
 

@@ -1,6 +1,7 @@
 package com.ml.featureswitch.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -32,7 +33,7 @@ public class Feature {
 
     @ManyToMany
     @JoinTable
-    Set<User> users;
+    Set<User> users = new HashSet<>();
 
     public boolean hasUser(User user) {
         return users.contains(user);
